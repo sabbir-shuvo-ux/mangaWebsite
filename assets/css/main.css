@@ -308,6 +308,10 @@ a{
 	padding-left: 1em;
 }
 
+.res_hero_btn{
+	gap: 10px;
+}
+
 @media (max-width: 767.98px) {
 	.samiTitle{
 		display: block !important;
@@ -334,6 +338,10 @@ a{
 	.hero_content {
 		padding: 1rem;
 		width: 50%;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.samiTitle {
@@ -345,11 +353,24 @@ a{
 		width: 200px;
 	}
 
+	.res_hero_btn button{
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 575.98px) {
+	.res_hero_btn {
+			flex-direction: column;
+			gap: 5px;
+	}
 
+	.button-group button {
+
+		margin-bottom: 0rem;
+
+	}
 }
+
 
 /* -----------------------------
 # read manga 
