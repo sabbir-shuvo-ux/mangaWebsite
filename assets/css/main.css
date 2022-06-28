@@ -447,6 +447,12 @@ a{
 	color: var(--black);
 }
 
+@media (max-width: 1199.98px) {
+	.anime_details{
+		display: none;
+	}
+}
+
 /* -----------------------------
 # read manga 
 ----------------------------- */
@@ -618,3 +624,4 @@ a{
 .copyRight{
 	color: var(--white);
 }
+
