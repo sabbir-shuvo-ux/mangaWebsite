@@ -25,13 +25,25 @@ $('#hotManga .owl-carousel').owlCarousel({
     dots:false,
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
-            items:1
+            items:3
         },
         1000:{
             items:4
         }
     }
-})
+});
+
+
+// notification
+const icon = document.querySelector('.notification_icon');
+icon.addEventListener('click', () => {
+    const notifyCount = document.querySelector('.notify_count');
+    notifyCount.innerText = 0;
+
+    const notifyBox = document.querySelector('.notify_box');
+    notifyBox.classList.toggle('d-none');
+    notifyBox.classList.toggle('d-block');
+});

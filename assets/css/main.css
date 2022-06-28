@@ -399,7 +399,7 @@ a{
 	top: 132px;
 	padding: 1rem;
 	width: 464px;
-	right: 12px;
+	right: 8px;
 	border-top-left-radius: 22px;
 }
 
@@ -425,6 +425,26 @@ a{
 	align-items: center;
 	border-radius: 50%;
 	font-size: 30px;
+}
+
+.notification_icon{
+	position: relative;
+}
+
+.notify_box {
+	height: auto;
+	width: 200px;
+	position: absolute;
+	padding: 0.5rem;
+	border: 1px solid var(--white);
+	left: 0;
+	top: 45px;
+	background: var(--tag);
+	z-index: 999;
+}
+
+.notify_box li{
+	color: var(--black);
 }
 
 /* -----------------------------
