@@ -238,6 +238,7 @@ a{
 
 .hero{
 	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .slider_container {
@@ -436,6 +437,11 @@ a{
 	border: 0;
 }
 
+.load_more{
+	color: var(--white);
+	background: var(--hot-rad);
+}
+
 @media (max-width: 768px) {
 	.card{
 		width: 275px;
@@ -485,4 +491,56 @@ a{
 	.count_number{
 		order: 3;
 	}
+}
+
+/* -----------------------------------------
+# ad show
+-------------------------------------------- */
+
+.ad_show{
+	padding: 2rem 0;
+}
+
+.inner_ad_show {
+	background: rgba(255, 122, 122, 1);
+	padding: 2rem;
+}
+
+.inner_ad_show h2{
+	color: var(--white);
+}
+
+/* -----------------------------------------
+# Footer
+-------------------------------------------- */
+
+.footer{
+	background: var(--hot-rad);
+	padding: 2rem 0;
+}
+
+.footer_logo {
+	color: var(--white);
+	text-transform: capitalize;
+	font-weight: bold;
+	border: 1px solid;
+	width: 200px;
+	margin: 1rem auto;
+	accent-color: ;
+	height: 70px;
+	display: grid;
+	place-items: center;
+}
+
+.footer_item{
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.footer_item li a{
+	color: var(--white);
+}
+
+.copyRight{
+	color: var(--white);
 }
