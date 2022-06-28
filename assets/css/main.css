@@ -372,6 +372,60 @@ a{
 	}
 }
 
+/* -----------------------------------------
+# hotManga
+-------------------------------------------- */
+
+.hotManga{
+	padding: 2rem 0;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.tags li a{
+	background: var(--tag);
+	color: var(--hot-rad);
+}
+
+.anime_details {
+	background: var(--hot-rad);
+	color: var(--white);
+	position: absolute;
+	transform: rotate(-90deg);
+	top: 132px;
+	padding: 1rem;
+	width: 464px;
+	right: 12px;
+	border-top-left-radius: 22px;
+}
+
+.hotManga .owl-nav {
+	position: absolute;
+	top: -76px;
+	left: 345px;
+	display: flex;
+}
+
+.hotManga .owl-nav .owl-prev, .hotManga .owl-nav .owl-next{
+	background: var(--hot-rad) !important;
+	color: var(--white) !important;
+	border: none;
+	padding: 0 !important;
+	font: inherit;
+	font-size: 30px !important;
+	background: white;
+	height: 40px;
+	display: flex;
+	width: 40px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 30px;
+}
 
 /* -----------------------------
 # read manga 
