@@ -636,6 +636,13 @@ a{
 	gap: 5px;
 }
 
+@media (max-width: 767.98px) {
+	.side_card{
+    	justify-content: space-between;
+    	padding-bottom: 2rem;
+	}
+}
+
 .count_number {
 	height: 50px;
 	width: 50px;
