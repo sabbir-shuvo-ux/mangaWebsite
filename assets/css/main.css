@@ -1,26 +1,55 @@
 :root{
+	--top-hot-rad: rgba(166, 37, 37, 1);
+	--tag-hot-rad: rgba(166, 37, 37, 1);
 	--hot-rad: rgba(166, 37, 37, 1);
 	--nav-rad: rgba(203, 71, 71, 1);
 	--yellow: rgba(252, 225, 85, 1);
 	--tag: rgba(255, 198, 198, 1);
 	--hero-btb: rgba(255, 255, 255, 1);
+	--small-btn: rgba(221, 221, 221, 1);
+	--ad-color: rgba(255, 122, 122, 1);
+	--side-count: rgba(166, 37, 37, 1);
+	--blue: #0d6efd;
 	--white: #ffffff;
 	--black: #000000;
+	--pink: pink;
+	--btn-black: #000;
+	--caro-white: #fff;
+	--caro-black: #000;
 
 	--font-bold: 'Gilroy-Bold', sans-serif;
 	--font-leight: 'Gilroy-Bold', sans-serif;
 	--font-medium: 'Gilroy-Bold', sans-serif;
 	--font-regular: 'Gilroy-Bold', sans-serif;
 	--font-heavy: 'Gilroy-Bold', sans-serif;
-
 }
+
+.dark_mode{
+	--ad-color: rgba(66, 66, 66, 1);
+	--hot-rad: rgba(66, 66, 66, 1);
+	--nav-rad: rgba(66, 66, 66, 1);
+	--tag: rgba(66, 66, 66, 1);
+	--hero-btb: rgba(66, 66, 66, 1);
+	--small-btn: rgba(66, 66, 66, 1);
+	--pink: rgba(66, 66, 66, 1);
+	--caro-white: rgba(66, 66, 66, 1);
+	--white: #ffffff;
+	--black: #000000;
+	--blue: #fff;
+	--tag-hot-rad: #fff;
+	--side-count: #fff;
+	--btn-black: #fff;
+	--caro-black: #fff;
+}
+
+	
 
 /* -----------------------------------------
 # Basic
 -------------------------------------------- */
 
 body{
-    font-family: var(--font-regular);                             
+    font-family: var(--font-regular);                 
 }
 
 a{
@@ -37,19 +66,28 @@ a{
 	background: var(--yellow);
 }
 
+.bg_yellow:hover{
+	border: 1px solid white !important;
+	color: white !important;
+}
+
 .bg_ddd{
-	color: var(--black) !important;
+	color: var(--btn-black) !important;
 	border: none !important;
 	background: var(--hero-btb);
 }
 
+.bg_ddd:hover{
+	border: 1px solid white !important;
+	color: white !important;
+}
 
 /* -----------------------------------------
 # NavTOp
 -------------------------------------------- */
 
 .nav_top{
-	background: var(--hot-rad);
+	background: var(--top-hot-rad);
 	height: 40px;
 }
 
@@ -175,6 +213,18 @@ a{
 	margin-right: 4px;
 }
 
+.darkMode.active_Dark .light{
+	display: flex !important;
+}
+
+.darkMode.active_Dark .moon_dark{
+	display: none !important;
+}
+
+.light{
+	display: none !important;
+}
+
 .notify{
 	position: relative;
 }
@@ -261,12 +311,12 @@ a{
 
 #hero .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
 	background: 0 0;
-	color: inherit;
+	color: var(--caro-black);
 	border: none;
 	padding: 0 !important;
 	font: inherit;
 	font-size: 48px;
-	background: white;
+	background: var(--caro-white);
 	height: 40px;
 	display: flex;
 	width: 40px;
@@ -388,19 +438,7 @@ a{
 
 .tags li a{
 	background: var(--tag);
-	color: var(--hot-rad);
-}
-
-.anime_details {
-	background: var(--hot-rad);
-	color: var(--white);
-	position: absolute;
-	transform: rotate(-90deg);
-	top: 132px;
-	padding: 1rem;
-	width: 464px;
-	right: 8px;
-	border-top-left-radius: 22px;
+	color: var(--tag-hot-rad);
 }
 
 .hotManga .owl-nav {
@@ -447,11 +485,66 @@ a{
 	color: var(--black);
 }
 
+.item_body {
+	height: 331px;
+	width: 234px;
+}
+
+.anime_details {
+	background: var(--hot-rad);
+	color: var(--white);
+	position: absolute;
+	transform: rotate(-90deg); 
+	top: 37%;
+	padding: 1rem;
+	right: 23%;
+	border-top-left-radius: 12px;
+	width: 337px;
+	border-top-right-radius: 16px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.anime_details{
+		top: 41%;
+		right: 27%;
+	}
+}
+
+@supports (-moz-appearance:none) {
+   .anime_details{
+		top: 37%;
+		right: 23%;
+	}
+}
+
+.moreBtnDark {
+	border: 1px solid black;
+	color: black !important;
+}
+
 @media (max-width: 1199.98px) {
 	.anime_details{
 		display: none;
 	}
+
+	.item_body {
+		height: auto;
+		width: 100%;
+	}
 }
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+	.anime_details {
+		right: 34%;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 5000px) {
+	.anime_details {
+		right: 34%;
+	}
+}
+
 
 /* -----------------------------
 # read manga 
@@ -467,12 +560,13 @@ a{
 }
 
 .small_btn {
-	background: rgba(221, 221, 221, 1);
+	background: var(--small-btn);
 	padding: 3px 8px;
 	border-radius: 20px;
 	font-size: 14px;
 	margin-right: 10px;
 	margin-bottom: 1em;
+	color: var(--blue);
 }
 
 .time {
@@ -549,8 +643,8 @@ a{
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
-	background: pink;
-	color: var(--hot-rad);
+	background: var(--pink);
+	color: var(--side-count);
 	border-radius: 5px;
 }
 
@@ -582,7 +676,7 @@ a{
 }
 
 .inner_ad_show {
-	background: rgba(255, 122, 122, 1);
+	background: var(--ad-color);
 	padding: 2rem;
 }
 

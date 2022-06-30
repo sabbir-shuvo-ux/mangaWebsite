@@ -47,3 +47,16 @@ icon.addEventListener('click', () => {
     notifyBox.classList.toggle('d-none');
     notifyBox.classList.toggle('d-block');
 });
+
+// darkMode
+const darkMode = document.querySelector('.darkMode');
+
+darkMode.addEventListener('click', () => {
+    const darkModeText = document.querySelector('.darkMode a');
+    const moreBTn = document.querySelector('.more_btn');
+
+
+    darkMode.classList.toggle('active_Dark');
+    document.body.classList.toggle('dark_mode');
+    moreBTn.classList.toggle('moreBtnDark')
+});
